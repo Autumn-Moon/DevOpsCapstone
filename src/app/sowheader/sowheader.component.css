@@ -1,0 +1,294 @@
+.sow-header-content {
+    display: flex;
+    background: #f2f8f9;
+    /* padding: 1rem 1.7rem; */
+    padding: 5px;
+    flex-grow: 1;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    height: 100%;   
+}
+
+.prj-landing-bg {
+    height: 100%;
+    width: 100%;
+    background: url('../../assets/images/sow-project-landing-2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.masthead {
+    height: 100%;
+    min-height: 0;
+    width: 18rem;
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.masthead .masthead-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,46,102,.8);
+    transform: skewX(-8deg);    
+    transform-origin: top left;
+    border-radius: 5px 0 0 5px;
+    z-index: -1;
+}
+
+.welcome-content {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-top: 3rem;
+    margin-bottom: 10px;        
+}
+
+.user-profile {
+	position: absolute;
+    margin-left: 15px;
+}
+
+.user-profile select{
+    background: #0563af;
+    background: white;
+	padding: 10px;
+    width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+	color: black;
+	font-size: 0.8rem;
+	box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+	-webkit-appearance: button;
+	outline: none;
+
+}
+
+.user-profile:before{
+    /* content: url('../../assets/images/settings.ico'); */
+    font-family: sans-serif;
+    color:white;
+    content: '';
+    /* background: url('../../assets/images/settings.ico'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+	position:absolute;
+    top:0;   
+	right: 0;
+	width:35px;
+	height:35px;
+    background: black;
+    border-radius: 0 3px 3px 0;
+    
+}
+
+.user-prof option {
+    height: 35px;
+}
+
+.prj-landing-bg {
+    display: flex;
+}
+
+.sow-form-box {
+    width: 100%;
+}
+
+.form-box {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 2.5rem 1.81rem;
+    border-radius: 2px;
+    background: white;
+    box-shadow: -2px -3px 10px 2px rgba(168,166,168,1);
+    box-shadow: -2px -3px 10px 0px rgba(168,166,168,1);
+    box-shadow: 2px 1px 10px 0px rgba(168,166,168,1);
+    box-shadow: 2px 1px 10px 0px rgba(189,179,189,1);
+    box-shadow: 2px 1px 5px 0px rgba(133,131,133,1);
+}
+
+.form-box .sow-ribbon{
+    width: 70px;
+    height: 70px;
+    background: #4285F4;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: -100px;
+    box-shadow: var(--shadow);
+}
+
+.sow-ribbon img {
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px;
+    opacity: 1;
+}
+
+.card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #404852;
+    margin-bottom: 22px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap:wrap;
+    margin-right:-30px;
+    margin-left: 30px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.form-cols {
+    padding: 0 12.5px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1rem;
+    /* border: 1px solid black; */
+}
+
+.form-cols-select {
+    /* padding: 0 12.5px; */
+    flex: 1;
+    display: flex;
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* margin-bottom: 1rem; */
+    margin-left: 0;
+    /* border: 1px solid black; */
+}
+
+.form-label-select {
+    flex: 0 0 22%;
+    max-width: 22%;
+    padding-top: 5px;
+    font-weight: normal;
+    padding-right: 12.5px;
+    /* padding-left: 12.5px; */
+    /* font-size: 12px; */
+    /* font-weight: initial; */
+    /* display: inline-block; */
+    /* border: 1px solid red; */
+}
+
+.form-label {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-top: 5px;
+    font-weight: normal;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    font-size: 12px;
+    font-weight: initial;
+    display: inline-block;
+}
+
+.form-input {
+    flex: 0 0 80%;
+    max-width: 80%;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    /* border: 1px solid red; */
+}
+
+.form-select-input select{
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-right: 12px;
+    padding-left: 12.5px;
+    height: 35px;
+    /* padding: 0; */
+    /* border: 1px solid blue; */
+    padding: 10px;
+    /* width: 180px; */
+    width: 24rem;
+    outline: none;
+}
+
+
+
+.form-control-select {
+    width: 70%;
+    border-radius: 2px;
+    line-height: 1;
+    border: 1px solid #ced4da;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    /* font-size: 3rem; */
+    padding: 0.56rem 0.75rem;
+    /* padding: 2rem 2rem; */
+    line-height: 14px;
+    height: 35px;
+}
+
+.form-control {
+    width: 70%;
+    border-radius: 2px;
+    line-height: 1;
+    border: 1px solid #ced4da;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    padding: 0.56rem 0.75rem;
+    line-height: 14px;
+}
+
+.form-button {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: -25px;
+    /* padding-right: 12.5px;
+    padding-left: 12.5px; */
+}
+
+.btn {
+    font-size: 0.875rem;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.56rem 1.375rem;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 0.5rem !important;
+}
+
+.btn.active.focus, .btn.focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #00ce68;
+    border-color: #00ce68;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-warn {
+    color: #fff;
+    background-color: #f4aa0a;
+    border-color: #f4aa0a;
+}

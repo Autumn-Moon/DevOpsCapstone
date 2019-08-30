@@ -1,0 +1,277 @@
+<div class="sow-header-content">
+  <div class="prj-landing-bg">
+       <div class="masthead">
+            <div class="welcome-content">
+                 Welcome <br>Ashok Raveendran
+            </div>
+            <div class="prof-dropdown">
+                 <div class="user-profile">
+                    <select class="user-prof">
+                       <option value="volvo">View Profile</option>
+                       <option value="saab">Edit Profile</option>
+                       <option value="mercedes">Update Pic</option>
+                    </select>
+                 </div>
+            </div>
+            <div class="masthead-bg"></div>
+       </div>
+<div class="sow-form-box">
+ <div class="form-box">
+    <div class="sow-ribbon">
+        <img src="../../assets/images/sow-form.ico" alt="">
+    </div>
+    <!-- STARTING OF FORM CONTROLS ------------------------------------------------- -->
+<form [formGroup]="sowHeaderForm" (ngSubmit)="onCreateSowHdr()">
+    <div class="card-title">
+    <h4>Statement of Work</h4>
+    </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->
+<div class="form-row">            
+    <div class="form-cols-select">
+        <div class="form-label-select">
+            <label for="frm_mstr_prj">Choose Project Code For SOW</label>
+        </div>
+<div class="form-select-input">
+    <select formControlName="frm_mstr_prj">
+        <option class="form-control-select" name="volvo" selected>Default</option>
+        <option class="form-control-select" name="frm_mstr_prj_val" *ngFor="let projs of loadedPosts">
+            {{ projs.sow_sk }}
+        </option>
+        <!-- <option class="form-control-select" name="volvo" >Default</option> -->
+    </select>
+</div>
+    </div>
+    <div class="form-cols-select">
+        <div class="form-label">
+            <!-- <label for="frm_ctrct_end_dte">Contract End Date</label> -->
+        </div>
+        <div class="form-input">
+            <!-- <input type="date" name="frm_ctrct_end_dte" class="form-control" placeholder="" ngModel> -->
+        </div>
+    </div>
+</div>              
+ <!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->
+<div class="form-row">            
+    <div class="form-cols">
+        <div class="form-label">
+            <label for="frm_vbuy_po">VBUY Po Number</label>
+        </div>
+        <div class="form-input">
+            <input type="text" formControlName="frm_vbuy_po" class="form-control">
+        </div>
+    </div>
+    <div class="form-cols">
+        <div class="form-label">
+            <label for="frm_ctrct_strt_dte">Contract Start Date</label>
+        </div>
+        <div class="form-input">
+            <input type="date" formControlName="frm_ctrct_strt_dte" class="form-control">
+        </div>
+    </div>
+</div>
+
+
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->
+<div class="form-row">            
+    <div class="form-cols">
+        <div class="form-label">
+            <label for="frm_sow_nbr">SOW Number</label>
+        </div>
+        <div class="form-input">
+            <input type="text" formControlName="frm_sow_nbr" class="form-control">
+        </div>
+    </div>
+    <div class="form-cols">
+         <div class="form-label">
+             <label for="frm_ctrct_end_dte">Contract End Date</label>
+         </div>
+         <div class="form-input">
+              <input type="date" formControlName="frm_ctrct_end_dte" class="form-control">
+         </div>
+    </div>
+</div>    
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                              
+<div class="form-row">
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_sow_nme">SOW Name</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_sow_nme" class="form-control">
+            </div>
+        </div>   
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_poc_add">POC Addition</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_poc_add" class="form-control">
+                </div>
+            </div>  
+    </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                  
+<div class="form-row">
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_owner">SOW Owner</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_owner" class="form-control">
+            </div>
+        </div> 
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_poc_off">POC Offshore</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_poc_off" class="form-control">
+                </div>
+            </div>                                                         
+
+
+    </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                      
+<div class="form-row">
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_opp_id">Opportunity ID</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_opp_id" class="form-control">
+            </div>
+        </div>  
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_poc_ons">POC Onsite</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_poc_ons" class="form-control">
+                </div>
+            </div>                                                            
+
+
+    </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                          
+<div class="form-row">
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_prc_id">Pricing Id</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_prc_id" class="form-control">
+            </div>
+        </div>  
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_ctrct_crte">Contract Creation</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_contract_crte" class="form-control">
+                </div>
+            </div>                                                                
+
+
+    </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                              
+<div class="form-row">
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_vf_sign_dte">VF Counter Signature Date</label>
+            </div>
+            <div class="form-input">
+                <input type="date" formControlName="frm_vf_sign_dte" class="form-control">
+            </div>
+        </div> 
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_invc_stat">SOW Invoice Status</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_invc_stat" class="form-control">
+                </div>
+            </div>                                                                     
+
+
+</div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                               
+    <div class="form-row">
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_wip_sign_dte">Wipro Counter Signature Date</label>
+                </div>
+                <div class="form-input">
+                    <input type="date" formControlName="frm_wip_sign_dte" class="form-control">
+                </div>
+            </div>  
+            <div class="form-cols">
+                    <div class="form-label">
+                        <label for="frm_ctrct_val">Contract Value</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" formControlName="frm_ctrct_val" class="form-control">
+                    </div>
+                </div>                                                                        
+
+
+    </div> 
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->                                              
+        <div class="form-row">   
+            <div class="form-cols">
+                    <div class="form-label">
+                        <label for="frm_ctrct_sign_dte">Contract Sign Date</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="date" formControlName="frm_ctrct_sign_dte" class="form-control">
+                    </div>
+                </div> 
+                <div class="form-cols">
+                        <div class="form-label">
+                            <label for="frm_invc_amt">Invoiced Amount</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" formControlName="frm_invc_amt" class="form-control">
+                        </div>
+                    </div> 
+</div>                                                                                             
+<div class="form-row">
+            <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_sow_rmrks">Remarks</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_sow_rmrks" class="form-control">
+                </div>
+            </div>
+<div class="form-cols">
+        <div class="form-button">
+            <button class="btn btn-warn" type="submit" (click)="addMilestone()"> 
+            <!-- [disabled]="sowHeaderForm.valid"> -->
+                Enter Milestone Data
+            </button>
+            <button class="btn btn-green" type="submit"(click)="addSOW()">
+                Skip and Submit
+            </button>
+        </div>
+    </div>            
+        </div>
+<!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->          
+        <!-- <div class="form-row">            
+            <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_ctrct_strt_dte">Contract Start Date</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" name="frm_sow_nbr" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-cols">
+                <div class="form-button">
+                    <button class="btn btn-warn" (click)=updateMilestone()>Enter Milestone Data</button>
+                    <button class="btn btn-green" type="submit">Skip and Submit</button>
+                </div>
+            </div>
+        </div>                             -->
+                      </form>
+                    </div>
+</div>       
+    

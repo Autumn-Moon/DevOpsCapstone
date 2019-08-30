@@ -1,0 +1,106 @@
+<div class="milestone-content">
+        <div class="prj-landing-bg">
+             <div class="masthead">
+                  <div class="welcome-content">
+                       Welcome <br>Ashok Raveendran
+                  </div>
+                  <div class="prof-dropdown">
+                       <div class="user-profile">
+                          <select class="user-prof">
+                             <option value="volvo">View Profile</option>
+                             <option value="saab">Edit Profile</option>
+                             <option value="mercedes">Update Pic</option>
+                          </select>
+                       </div>
+                  </div>
+                  <div class="masthead-bg"></div>
+             </div>
+<div class="milestone-form-box">
+    <div class="form-box">
+        <div class="sow-ribbon">
+            <img src="../../assets/images/sow-milestone-1.ico" alt="">
+        </div>                      
+        <form [formGroup]="milestoneForm" (ngSubmit)="onCreateMilestone()">
+            <div class="card-title">
+                Milestone Form
+            </div> 
+<!-- ROW 1 STARTS ------------------------------------------------------------------------------------------->
+    <div class="form-row">            
+        <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_mlstne_nme">Milestone Name</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_mlstne_nme" class="form-control">
+            </div>
+        </div>
+        <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_mlstne_invc_amt">Milestone Invoiced Amount</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_mlstne_invc_amt" class="form-control">
+            </div>
+        </div>
+    </div>
+<!-- ROW 1 ENDS ------------------------------------------------------------------------------------------->
+<div class="form-row">            
+        <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_mlstne_dte">Milestone Date</label>
+            </div>
+            <div class="form-input">
+                <input type="date" formControlName="frm_mlstne_dte" class="form-control">
+            </div>
+        </div>
+        <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_mlstne_invc_mon">Milestone Invoice Month</label>
+            </div>
+            <div class="form-input">
+                <input type="text" formControlName="frm_mlstne_invc_mon" class="form-control">
+            </div>
+        </div>
+</div>
+<!-- ROW 2 ENDS ------------------------------------------------------------------------------------------->
+<div class="form-row">            
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_mlstne_amt">Milestone Total Amount</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_mlstne_amt" class="form-control">
+                </div>
+        </div>
+        <div class="form-cols">
+                <div class="form-label">
+                    <label for="frm_mlstne_rmrks">Remarks</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="frm_mlstne_rmrks" class="form-control">
+                </div>
+        </div>
+</div>
+<!-- ROW 3 ENDS ------------------------------------------------------------------------------------------->
+<div class="form-row">            
+        <div class="form-cols">
+                <div class="form-label">
+                    <!-- <label for="frm_mlstne_invc_stat">Remarks</label> -->
+                </div>
+                <div class="form-input">
+                    <!-- <input type="text" formControlName="frm_sow_nbr" class="form-control"> -->
+                </div>
+        </div>
+        <div class="form-cols">
+            <div class="form-button">
+                <!-- <button class="btn btn-warn">Enter Milestone Data</button> -->
+                <button class="btn btn-green" type="submit" (click)="submitSOWMlstne()">Submit</button>
+            </div>
+        </div>
+</div>
+<!-- ROW 4 ENDS ------------------------------------------------------------------------------------------->
+                                        
+</form>
+</div>                
+
+</div>             

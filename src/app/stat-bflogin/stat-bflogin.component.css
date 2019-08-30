@@ -1,0 +1,141 @@
+main {
+    /* padding-top:55px; */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+            "heroimg1 heroimg2"
+
+}
+
+main .heroimg1 {
+    grid-area: heroimg1;
+    height: 400px;
+    width: 100%;
+    background: url('../../assets/images/sow-sign.jpg');
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .heroimg1 h1 {    
+    /* color: white;  */
+    /* color: sandybrown; */
+    /* color: #F2F3F4; */
+    color: #FDEDEC;
+    /* color: #FEF9E7; */
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0.1rem;
+    /* border: 1px solid black; */
+    margin-left: 40%;
+    /* margin-left: 325px; */
+    /* align-self: */
+}
+
+main .heroimg1 .imgbtn {
+    color: white; 
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 40px;
+    background: black;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-right: 6%; 
+    /* margin-right: 50px; */
+}
+
+main .heroimg2 {
+    grid-area: heroimg2;
+    height: 400px;
+    width: 100%;
+    background: url('../../assets/images/sow-track.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.features {
+    max-width: 100%;
+    margin: 30px 100px 10px;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); */
+    grid-template-columns: repeat(3,1fr);
+    
+    align-self: center;
+    justify-self: center;
+    height: 400px;
+    /* border: 10px solid black; */
+    background: white;
+    background: #F6F6F6;
+    grid-gap: 10px;
+}
+
+.info {
+    text-align: center;
+    /* border: 1px solid black; */
+    /* padding: 1rem 1rem; */
+    padding: 0;
+    color: rgb(0, 0, 0);
+    /* background: rgb(180, 172, 172); */
+    /* box-shadow: var(--shadow); */
+}
+
+.info p {
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.info p.lorem {
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-weight: bold; */
+    color: darkgoldenrod;
+    /* color: grey;     */
+    /* opacity: 1; */
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.features .info .info-img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid black; */
+    margin: 10px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+    background-size: contain;
+    background-position: center;
+    /* background-color: red;  */
+}
+
+.info-img.info-img-1 {
+    background: url('../../assets/images/sow-authenticate.png');    
+}
+
+.info-img.info-img-2 {
+    background: url('../../assets/images/sow-project.png');
+}
+
+.info-img.info-img-3 {
+    background: url('../../assets/images/sow-sow.png');
+}
+
+.info-img.info-img-4 {
+    background: url('../../assets/images/sow-milestone.jpg');
+}
+
+.info-img.info-img-5 {
+    background: url('../../assets/images/sow-upload.png');
+}
+
+.info-img.info-img-6 {
+    background: url('../../assets/images/sow-reminder.jpg');
+}

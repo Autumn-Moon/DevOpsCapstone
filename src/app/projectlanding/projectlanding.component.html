@@ -1,0 +1,59 @@
+
+<div class="prj-landing-comp">
+   <div class="prj-landing-bg">
+        <div class="masthead">
+             <div class="welcome-content">
+                  Welcome <br>Ashok Raveendran
+             </div>
+             <div class="prof-dropdown">
+                  <div class="user-profile">
+                       <select class="user-prof">
+                           <option value="volvo">View Profile</option>
+                           <option value="saab">Edit Profile</option>
+                           <option value="mercedes">Update Pic</option>
+                        </select>
+                   </div>
+              </div>
+              <div class="masthead-bg"></div>
+        </div>
+        <div class="dash-features">
+             <div class="feature-cards">
+                   <a (click)="genDashboard()">
+                   <div class="feature-onecard br-red">
+                      <div class="dashcard"></div>
+                      <div style="font-size: 10px">Generate Dashboard</div>
+                   </div>
+                   </a>
+                   <a (click)="addSow()">
+                   <div class="feature-onecard br-blu">
+                        <div class="sowcard"></div>
+                        <div style="font-size: 10px">Add SOW</div>
+                   </div>
+                   </a>
+
+                   <a (click)="uploadSOW()">
+                   <div class="feature-onecard br-ylo">
+                        <div class="uploadcard"></div>
+                        <div style="font-size: 10px">Upload SOW Document</div>
+                   </div>
+                   </a>
+
+                   <a (click)="updateMilestone()">
+                   <div class="feature-onecard br-grn">
+                        <div class="milecard"></div>
+                        <div style="font-size: 10px">Update Milestone</div>        
+                   </div>
+                   </a>                   
+             </div>
+             <div class="add-project-layout">
+                  <div class="form-prj-ctl">
+                       <form #prjForm="ngForm" (ngSubmit)="OnCreateProject(prjForm)"> 
+                         <input type="text" ngModel class="form-prj-txt" placeholder="Add New Project Code" name="frm_prj_val">
+                         <button class="form-btn" type="submit">+</button>
+                    </form>
+                  </div>
+             </div>
+         </div>
+   </div>
+</div>
+        

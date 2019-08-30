@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500,600&display=swap');
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;   
+}
+
+body {
+  background: #F6F6F6;
+  margin:0;
+}
+
+a {
+  cursor: pointer;
+}

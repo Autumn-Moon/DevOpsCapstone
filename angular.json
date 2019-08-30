@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SowTracker": {
+    "SOWTracker": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SowTracker",
+            "outputPath": "dist/SOWTracker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,11 +50,6 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
                 }
               ]
             }
@@ -63,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SowTracker:build"
+            "browserTarget": "SOWTracker:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SowTracker:build:production"
+              "browserTarget": "SOWTracker:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SowTracker:build"
+            "browserTarget": "SOWTracker:build"
           }
         },
         "test": {
@@ -111,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SowTracker:serve"
+            "devServerTarget": "SOWTracker:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SowTracker:serve:production"
+              "devServerTarget": "SOWTracker:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "SowTracker"
+  "defaultProject": "SOWTracker"
 }
