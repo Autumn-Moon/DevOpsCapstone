@@ -16,6 +16,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MilestoneComponent } from './milestone/milestone.component';
 import { SowlogComponent } from './sowlog/sowlog.component';
 import { DataFetchService } from './datafetch.service';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DataFetchService } from './datafetch.service';
     SowheaderComponent,
     SidebarComponent,
     MilestoneComponent,
-    SowlogComponent
+    SowlogComponent,
+    TestcomponentComponent
   ],
   imports: [
     BrowserModule,
