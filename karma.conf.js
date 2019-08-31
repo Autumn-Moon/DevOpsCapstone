@@ -20,19 +20,22 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-   browsers: ["Chrome", "HeadlessChrome"],
-    customLaunchers: {
-      HeadlessChrome: {
-      base: "ChromeHeadless",
-      flags: ["--no-sandbox"]
-      }
-  },
+   customLaunchers: {
+      ChromeHeadless: {
+       base: 'Chrome',
+       flags: [
+       '--headless','--disable-gpu',
+       '--no-sandbox',
+       '--remote-debugging-port=9222']
+       }
+      },
+      browsers: ['ChromeHeadless'],
+      singleRun: true,
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    singleRun: false,
     restartOnFileChange: true
   });
 };
