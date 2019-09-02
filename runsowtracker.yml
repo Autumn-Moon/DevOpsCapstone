@@ -1,0 +1,28 @@
+---
+- hosts: dockerhost
+  become: no
+  tasks:
+    - name: Remove container if any
+      docker_container:
+        state: absent
+        name: sowtracker
+
+    - name: Remove Image if any
+      docker_image:
+        state: absent
+        name: 35.171.83.17:8085/sowtracker:1.1
+
+    - name: Log into private registry and force re-authorization
+      docker_login:
+        registry: 'http://35.171.83.17:8085'
+        username: "admin"
+        password: "nexusadmin"
+
+    - name: Ensure a container is running
+      docker_container:
+        name: sowtracker
+        state: started
+        image: 35.171.83.17:8085/sowtracker:1.1
+        pull: true
+        ports:
+          - "8383:80"
