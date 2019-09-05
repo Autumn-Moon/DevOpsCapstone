@@ -1,1 +1,2 @@
+[dockerhost]
 3.84.132.212 ansible_connection=ssh ansible_ssh_user=dockeradmin
