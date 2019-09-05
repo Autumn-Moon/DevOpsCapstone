@@ -25,4 +25,4 @@
         image: 3.84.132.212:8085/sowtracker:1.2
         pull: true
         ports:
-          - "8383:80"
+          - "8080:80"
