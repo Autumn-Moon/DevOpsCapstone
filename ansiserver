@@ -1,2 +1,2 @@
 [dockerhost]
-34.204.84.152 ansible_connection=ssh ansible_ssh_user=dockeradmin
+18.206.95.238 ansible_connection=ssh ansible_ssh_user=dockeradmin
