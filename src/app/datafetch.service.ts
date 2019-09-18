@@ -13,6 +13,7 @@ export class DataFetchService {
     
     sowMlstneTopHeader: any;
     sowMlstneStatusRec: any;
+    submit_sow_and_milestone: any;
 
 
     captureSOWFormValues(sowHeaderForm: FormGroup) {
@@ -89,6 +90,10 @@ export class DataFetchService {
                 break;
         }
 
+    }
+
+    captureAction(milestone_wth_sow: Boolean) {
+        this.submit_sow_and_milestone = milestone_wth_sow;
     }
 
     captureMilestoneFormValues(milestoneForm: FormGroup) {

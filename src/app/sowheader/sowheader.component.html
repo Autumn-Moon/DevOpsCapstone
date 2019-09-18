@@ -27,28 +27,31 @@
     </div>
 <!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->
 <div class="form-row">            
-    <div class="form-cols-select">
-        <div class="form-label-select">
-            <label for="frm_mstr_prj">Choose Project Code For SOW</label>
-        </div>
-<div class="form-select-input">
-    <select formControlName="frm_mstr_prj">
-        <option class="form-control-select" name="volvo" selected>Default</option>
-        <option class="form-control-select" name="frm_mstr_prj_val" *ngFor="let projs of loadedPosts">
-            {{ projs.sow_sk }}
-        </option>
-        <!-- <option class="form-control-select" name="volvo" >Default</option> -->
-    </select>
-</div>
+    <div class="form-cols">
+            <div class="form-label">
+                <label for="frm_prj_type">Project Type</label>
+            </div>
+            <div class="form-input">
+
+            <select formControlName="frm_prj_type" class="form-control"> 
+                <option value="FPP">FPP</option>
+                <option value="TNM">TNM</option>                
+            </select>                         
+            </div>        
     </div>
-    <div class="form-cols-select">
-        <div class="form-label">
-            <!-- <label for="frm_ctrct_end_dte">Contract End Date</label> -->
-        </div>
-        <div class="form-input">
-            <!-- <input type="date" name="frm_ctrct_end_dte" class="form-control" placeholder="" ngModel> -->
-        </div>
-    </div>
+    <div class="form-cols">
+         <div class="form-label">
+              <label for="frm_mstr_prj">Choose Project Code</label>
+         </div>
+         <div class="form-input">
+              <select formControlName="frm_mstr_prj" class="form-control">
+                 <option class="form-control-select" name="volvo" selected>Default</option>
+                 <option class="form-control-select" name="frm_mstr_prj_val" *ngFor="let projs of loadedPosts">
+                    {{ projs.sow_sk }}
+                 </option>                
+              </select>
+         </div>
+   </div>
 </div>              
  <!-- STARTING OF A ROW IN THE FORM ------------------------------------------------- -->
 <div class="form-row">            

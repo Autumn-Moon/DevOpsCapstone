@@ -1,16 +1,24 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { AppPage, AdminPage } from './app.po';
+import { browser, logging, by, element } from 'protractor';
+
 
 describe('workspace-project App', () => {
   let page: AppPage;
+  let adminpg: AdminPage;
 
   beforeEach(() => {
     page = new AppPage();
+    adminpg = new AdminPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to SOWTracker!');
+    expect(page.getTitleText()).toEqual('Welcome to SOW Tracker Tool.');
+  });
+
+  it('should display Text on Button', () => {
+    adminpg.navigateToAdmin();
+    expect(adminpg.getTitleText()).toEqual('+');
   });
 
   afterEach(async () => {

@@ -16,7 +16,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MilestoneComponent } from './milestone/milestone.component';
 import { SowlogComponent } from './sowlog/sowlog.component';
 import { DataFetchService } from './datafetch.service';
-import { TestcomponentComponent } from './testcomponent/testcomponent.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 @NgModule({
@@ -30,8 +30,7 @@ import { TestcomponentComponent } from './testcomponent/testcomponent.component'
     SowheaderComponent,
     SidebarComponent,
     MilestoneComponent,
-    SowlogComponent,
-    TestcomponentComponent
+    SowlogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +39,7 @@ import { TestcomponentComponent } from './testcomponent/testcomponent.component'
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [DataFetchService],
+  providers: [DataFetchService, {provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 

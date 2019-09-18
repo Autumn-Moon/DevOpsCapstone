@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 
 :root {
   --primary: #ddd;
@@ -19,6 +20,7 @@ html {
 body {
   background: #F6F6F6;
   margin:0;
+  outline: none;
 }
 
 a {

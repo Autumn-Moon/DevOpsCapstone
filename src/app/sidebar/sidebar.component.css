@@ -5,6 +5,8 @@
     flex-direction: column;
     background: #232F3E; 
     min-height: 100vh;
+    height: 100%;
+    flex-grow: 1;
 }
 
 .owner_grid {

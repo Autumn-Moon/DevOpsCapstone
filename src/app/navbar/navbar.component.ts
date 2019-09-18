@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   loginHome() {
     console.log(this.route.url);
     // this.router.navigate(['admin'])
-    this.router.navigate(['admin'], {relativeTo: this.route});
+    this.router.navigate(['admin']);
 
     
   }

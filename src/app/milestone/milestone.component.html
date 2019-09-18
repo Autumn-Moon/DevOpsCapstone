@@ -21,8 +21,10 @@
             <img src="../../assets/images/sow-milestone-1.ico" alt="">
         </div>                      
         <form [formGroup]="milestoneForm" (ngSubmit)="onCreateMilestone()">
+            <div formArrayName="milestones">
+                <div *ngFor="let miles of milestoneArray.controls; let i = index" [formGroupName]="i">
             <div class="card-title">
-                Milestone Form
+                Milestone Form <span style="color: black"> - {{i+1}}</span>
             </div> 
 <!-- ROW 1 STARTS ------------------------------------------------------------------------------------------->
     <div class="form-row">            
@@ -94,12 +96,14 @@
         <div class="form-cols">
             <div class="form-button">
                 <!-- <button class="btn btn-warn">Enter Milestone Data</button> -->
+                <button class="btn btn-warn" type="submit" (click)="addplusMilestonForm()">+</button>
+                <button class="btn btn-warn" type="submit" (click)="removeMilestonForm(i)" *ngIf="i!=0">-</button>
                 <button class="btn btn-green" type="submit" (click)="submitSOWMlstne()">Submit</button>
             </div>
         </div>
 </div>
 <!-- ROW 4 ENDS ------------------------------------------------------------------------------------------->
-                                        
+    </div></div>
 </form>
 </div>                
 

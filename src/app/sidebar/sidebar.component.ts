@@ -33,4 +33,8 @@ export class SidebarComponent implements OnInit {
   addProject() {
     this.router.navigate(['admin']);
   }
+
+  sendReminder() {
+    this.router.navigate(['admin']);
+  }
 }

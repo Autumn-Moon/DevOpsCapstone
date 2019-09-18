@@ -103,6 +103,7 @@
 
 .sow-header-content {
     background: #f2f8f9;
+    background: white;
     /* background: #F6F6F6; */
     /* background: lightgray; */
     /* padding: 0 1.7rem; */
@@ -116,6 +117,7 @@
     position: relative;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    height: 100%;
     /* font-size: 1rem; */
     /* box-shadow: var(--shadow); */
     
@@ -646,8 +648,8 @@
 }
 
 .sow-return-log {
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 100%;
+    max-width: 100%;
     /* background: lightcoral; */
     display: flex;
     /* padding: 10px; */
@@ -727,6 +729,7 @@
 .console-head {
     overflow: hidden;
     background-color: #d5d5d5;
+    background-color: #1e1e1e;
     padding: 8px 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -763,3 +766,17 @@
 .console-dot.dot-grn {
     background: #28ca40;
 }
+
+.submit_progress_data {
+    color: #28ca40;
+    font-size: 0.6 rem;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 0.5rem;
+}
+
+.submit_progress_header {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.8 rem;
+    color: #F6F6F6;
+}
+

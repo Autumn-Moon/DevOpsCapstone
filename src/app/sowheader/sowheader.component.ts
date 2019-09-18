@@ -23,6 +23,7 @@ export class SowheaderComponent implements OnInit {
       sowHeaderForm: FormGroup;
       addMilestoneClicked = false;
       addSOWClicked = false;
+      milestone_with_sow = true;
 
       getProj_URI = 'https://n4nap72xqk.execute-api.us-east-1.amazonaws.com/beta/getprojects';
       addNSow_URI = 'https://n4nap72xqk.execute-api.us-east-1.amazonaws.com/beta/addnewsow';
@@ -34,6 +35,7 @@ export class SowheaderComponent implements OnInit {
       
       createSOWForm() {
         this.sowHeaderForm = new FormGroup({
+          'frm_prj_type'       : new FormControl('FPP',Validators.required),          
           'frm_mstr_prj'       : new FormControl('Choose Project',Validators.required),
           'frm_vbuy_po'        : new FormControl(null,Validators.required),
           'frm_sow_nbr'        : new FormControl(null,Validators.required),
@@ -64,6 +66,7 @@ export class SowheaderComponent implements OnInit {
 
         //If Milestone Button Clicked, navigate to Milestone Component
         if(this.addMilestoneClicked) {
+          this.datafetch.captureAction(this.milestone_with_sow); 
           this.router.navigate(['../milestone'],{relativeTo: this.route});
         }
         else {
@@ -72,15 +75,8 @@ export class SowheaderComponent implements OnInit {
               this.datafetch.createSOWRecords("sowHdrDetail_Type");
               this.datafetch.createSOWRecords("sowTopHeader_Type");
               console.log(JSON.stringify(this.datafetch.sowHdrDetailRecord));
-              this.http.post(this.addNSow_URI,JSON.stringify(this.datafetch.sowHdrDetailRecord))
-              .subscribe(responseData => {
-                      console.log(responseData);
-               });
-
-              this.http.post(this.addNSow_URI,JSON.stringify(this.datafetch.sowTopHeaderRecord))
-              .subscribe(responseData => {
-                      console.log(responseData);
-               });
+              console.log(JSON.stringify(this.datafetch.sowTopHeaderRecord));
+              this.router.navigate(['../log'],{relativeTo: this.route});
             }
         }
       }
@@ -95,7 +91,7 @@ export class SowheaderComponent implements OnInit {
 
 // Below method extracts the List of available projects from DynamoDB and populates the Option element in 
 // SOW Header Component HTML display page..
-   getProjectsList() {
+      getProjectsList() {
     this.http.get<Projects>(this.getProj_URI)
     .pipe(
       map(responseData=>{
