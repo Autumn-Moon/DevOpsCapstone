@@ -17,7 +17,8 @@ exports.config = {
     chromeOptions: {
       args: [ "--headless",
               "--no-sandbox",
-              "--disable-gpu"
+              "--disable-gpu",
+              "--allow-insecure-localhost"
       ]
     }    
   },
