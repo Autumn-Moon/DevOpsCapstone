@@ -6,7 +6,7 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('stat-bflogin h1')).getText() as Promise<string>;
+    return element(by.css('app-stat-bflogin h1')).getText() as Promise<string>;
   }
 }
 
