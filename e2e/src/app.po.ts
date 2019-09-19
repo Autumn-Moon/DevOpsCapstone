@@ -16,6 +16,6 @@ export class AdminPage {
   }
 
   getTitleText() {
-    return element(by.css('projectlanding .form-btn')).getText() as Promise<string>;
+    return element(by.css('app-projectlanding .form-btn')).getText() as Promise<string>;
   }
 }
