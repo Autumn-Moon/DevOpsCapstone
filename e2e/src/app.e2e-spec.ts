@@ -12,13 +12,13 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', () => {
-    browser.waitForAngularEnabled(false);
+    //browser.waitForAngularEnabled(false);
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Welcome to SOW Tracker Tool.');
   });
 
   it('should display Text on Button', () => {
-    browser.waitForAngularEnabled(false);
+    //browser.waitForAngularEnabled(false);
     adminpg.navigateToAdmin();
     expect(adminpg.getTitleText()).toEqual('+');
   });
