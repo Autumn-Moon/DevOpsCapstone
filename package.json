@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "pree2e": "webdriver-manager update --versions.chrome=$(google-chrome-stable --version | cut -d ' ' -f 3) --standalone --gecko false",
+    "pree2e": "webdriver-manager update --versions.chrome=$(google-chrome-stable --version | cut -d ' ' -f 3) --standalone --gecko false && webdriver-manager start --detach",
     "e2e": "protractor ./e2e/protractor.conf.js"
   },
   "private": true,
