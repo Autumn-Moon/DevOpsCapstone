@@ -9,6 +9,7 @@ const { SpecReporter } = require('jasmine-spec-reporter');
  */
 exports.config = {
   allScriptsTimeout: 30000,
+  seleniumAddress: 'http://localhost:4444/wd/hub'
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
