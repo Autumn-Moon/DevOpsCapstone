@@ -9,7 +9,6 @@ const { SpecReporter } = require('jasmine-spec-reporter');
  */
 exports.config = {
   allScriptsTimeout: 30000,
-  seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
@@ -23,8 +22,9 @@ exports.config = {
       ]
     }    
   },
-  directConnect: false,
-  baseUrl: 'http://localhost:4200/',
+  directConnect: true,
+  //baseUrl: 'http://localhost:4200/',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   framework: 'jasmine2',
   jasmineNodeOpts: {
     showColors: true,
