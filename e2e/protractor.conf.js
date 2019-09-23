@@ -3,7 +3,8 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
-const { AllureReporter } = require('jasmine-allure2-reporter').AllureReporter;
+const { AllureReporter } = require('jasmine-allure2-reporter');
+//var allureJasmine = require('jasmine-allure2-reporter');
 
 /**
  * @type { import("protractor").Config }
@@ -38,6 +39,7 @@ exports.config = {
       project: require('path').join(__dirname, './tsconfig.json')
     });
     //var AllureReporter = require('jasmine-allure-reporter');
+    //var reporter = new AllureReporter.JasmineAllureReporter(runtime);
     jasmine.getEnv().addReporter(new AllureReporter({
       resultsDir: 'allure-results'
     }));
