@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  sowtracker:
+    hostname: localhost
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: ${DOCKERIMAGENAME}
