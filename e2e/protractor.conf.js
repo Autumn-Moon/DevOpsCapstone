@@ -3,7 +3,7 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
-const { AllureReporter } = require('jasmine-allure2-reporter');
+const { AllureReporter } = require('jasmine-allure2-reporter').AllureReporter;
 
 /**
  * @type { import("protractor").Config }
