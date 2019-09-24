@@ -1,0 +1,5 @@
+---
+dockerimage: 54.198.101.5:8085/sowtracker:966
+prv_reg_add: 54.198.101.5:8085
+nexus_user: admin
+nexus_secret: nexusadmin

@@ -1,6 +1,9 @@
 ---
 - hosts: dockerhost
   become: no
+  vars_files:
+    - /vars.yml
+
   tasks:
     - name: Remove container if any
       docker_container:
@@ -10,19 +13,19 @@
     - name: Remove Image if any
       docker_image:
         state: absent
-        name: 18.206.95.238:8085/sowtracker:1.3
+        name: {{dockerimage}}
 
     - name: Log into private registry and force re-authorization
       docker_login:
-        registry: 'http://18.206.95.238:8085'
-        username: "admin"
-        password: "nexusadmin"
+        registry: 'http://{{prv_reg_add}}'
+        username: "{{nexus_user}}"
+        password: "{{nexus_secret}}"
 
     - name: Ensure a container is running
       docker_container:
         name: sowtracker
         state: started
-        image: 18.206.95.238:8085/sowtracker:1.3
+        image: {{dockerimage}}
         pull: true
         ports:
           - "8080:80"
