@@ -22,9 +22,9 @@ exports.config = {
       ]
     }    
   },
-  directConnect: false,
+  directConnect: true,
   baseUrl: 'http://localhost:4200/',
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
   framework: 'jasmine2',
   jasmineNodeOpts: {
     showColors: true,

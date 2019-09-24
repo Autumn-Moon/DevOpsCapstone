@@ -29,8 +29,8 @@ sudo su - nexus -c "sh /opt/nexus/bin/nexus start"
 Echo "Starting the Nexus artifacts Repository"
 
 ## Start the selenium web driver
-sudo su -c "sh /root/selenium/prepare_selenium.sh"
-Echo "Starting the Selenium Web Driver"
+#sudo su -c "sh /root/selenium/prepare_selenium.sh"
+#Echo "Starting the Selenium Web Driver"
 
 ## Prepare the docker environment
 sudo su -c "sh /root/docker/docker_prepare.sh"
