@@ -17,6 +17,7 @@ function Echo
 
 NEXUSPORT=8085
 IPADDR=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
+JENKINSBUILDNO=${BUILD_NUMBER}
 DOCKERIMAGENAME=${IPADDR}:${NEXUSPORT}/sowtracker:${JENKINSBUILDNO}
 
 docker login -u admin -p nexusadmin ${IPADDR}:8085
