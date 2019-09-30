@@ -22,6 +22,8 @@ DOCKERIMAGENAME=${IPADDR}:${NEXUSPORT}/sowtracker:${JENKINSBUILDNO}
 docker login -u admin -p nexusadmin ${IPADDR}:8085
 Echo "Docker Login to Nexus Repository"
 
+echo $DOCKERIMAGENAME
+
 docker push ${DOCKERIMAGENAME}
 Echo "Pushing Docker Image to Nexus Repository"
 

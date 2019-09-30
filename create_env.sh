@@ -58,7 +58,7 @@ echo "nexus_user: admin" >> vars.yml
 echo "nexus_secret: nexusadmin" >> vars.yml
 Echo "Creating Variables file for Ansible Playbook"
 
-sed -e "s/public_ip/${IPADDR}/g" ansiserver.dat > ansiserver
+sed -e "s/public_ip/${IPADDR}/g" ansiserver_meta.dat > ansiserver
 Echo "Creating Inventory file with IP Address of DockerHost"
 
 Echo "Script create_env.sh exiting successfully"
