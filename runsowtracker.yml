@@ -2,7 +2,7 @@
 - hosts: dockerhost
   become: no
   vars_files:
-    - /vars.yml
+    - vars.yml
 
   tasks:
     - name: Remove container if any
@@ -13,7 +13,7 @@
     - name: Remove Image if any
       docker_image:
         state: absent
-        name: {{dockerimage}}
+        name: "{{ dockerimage }}"
 
     - name: Log into private registry and force re-authorization
       docker_login:
@@ -25,7 +25,7 @@
       docker_container:
         name: sowtracker
         state: started
-        image: {{dockerimage}}
+        image: "{{ dockerimage }}"
         pull: true
         ports:
           - "8080:80"
