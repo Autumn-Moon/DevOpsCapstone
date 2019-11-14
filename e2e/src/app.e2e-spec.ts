@@ -14,7 +14,7 @@ describe('workspace-project App', () => {
   it('should display welcome message', () => {
     //browser.waitForAngularEnabled(false);
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to SOW Tracker Tool Demo.');
+    expect(page.getTitleText()).toEqual('Welcome to SOW Tracker Tool.');
   });
 
   it('should display Text on Button', () => {
